@@ -1,6 +1,6 @@
 import {mount, VueWrapper} from '@vue/test-utils'
 import {beforeEach, describe, expect, it} from "vitest";
-import Card from "../card/Card.vue";
+import Card from "@/components/card/Card.vue";
 
 describe('Card', () => {
 

@@ -1,7 +1,7 @@
 import { shallowMount, VueWrapper } from '@vue/test-utils';
 import PostItem from "@/components/posts/PostItem.vue";
 import {beforeEach, describe, expect, it} from "vitest";
-import type {PostItemPropType} from "../../types/Types";
+import type {PostItemPropType} from "@/types/Types";
 
 const factory = (props: PostItemPropType) => {
     return shallowMount(PostItem, {

@@ -49,11 +49,14 @@ const onSortChange = (action: ActionsType) => {
 }
 
 const onTimeTravelChange = (action: ActionsType) => {
-  const actionIndex = actions.value.indexOf(action)
+  const actionIndex = actions.value.indexOf(action);
+  if (actionIndex < 0) return;
 
-  actions.value = actions.value.filter((_, key) => key > actionIndex);
+  actions.value.slice(0, actionIndex + 1)
+      .forEach(action => sortPosts(action.postId, action.fromIndex));
 
-  sortPosts(action.postId, action.fromIndex);
+  actions.value = actions.value.slice(actionIndex + 1);
+
 }
 
 onBeforeMount(fetchData);

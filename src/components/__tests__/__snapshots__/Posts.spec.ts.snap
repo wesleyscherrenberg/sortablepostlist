@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Posts.vue > When the component renders > matches the snapshot 1`] = `
-"<post title="Sortable Post List">
+"<div title="Sortable Post List">
   <transition-group-stub name="list" tag="div" appear="false" persisted="false" css="true" class="flex flex-col gap-4">
     <div index="0" postid="1" showsortup="false" showsortdown="true"></div>
     <div index="1" postid="2" showsortup="true" showsortdown="true"></div>
@@ -9,7 +9,7 @@ exports[`Posts.vue > When the component renders > matches the snapshot 1`] = `
     <div index="3" postid="4" showsortup="true" showsortdown="true"></div>
     <div index="4" postid="5" showsortup="true" showsortdown="false"></div>
   </transition-group-stub>
-</post>
+</div>
 <div title="List of actions commited">
   <div icon="info" text="Please sort a post in the Sortable Post List"></div>
 </div>
@@ -17,7 +17,7 @@ exports[`Posts.vue > When the component renders > matches the snapshot 1`] = `
 `;
 
 exports[`Posts.vue > when sorting post List > matches the snapshot 1`] = `
-"<post title="Sortable Post List">
+"<div title="Sortable Post List">
   <transition-group-stub name="list" tag="div" appear="false" persisted="false" css="true" class="flex flex-col gap-4">
     <div index="0" postid="1" showsortup="false" showsortdown="true"></div>
     <div index="1" postid="3" showsortup="true" showsortdown="true"></div>
@@ -25,11 +25,11 @@ exports[`Posts.vue > when sorting post List > matches the snapshot 1`] = `
     <div index="3" postid="4" showsortup="true" showsortdown="true"></div>
     <div index="4" postid="5" showsortup="true" showsortdown="false"></div>
   </transition-group-stub>
-</post>
+</div>
 <div title="List of actions commited">
   <div>
     <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-      <p class="flex-1" data-test="itemText">Moved post 2 from index 1 to index 2</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
+      <p class="flex-1" data-test="itemText">Moved post 2 from index 1 to index 2</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
     </div>
   </div>
 </div>
@@ -37,7 +37,7 @@ exports[`Posts.vue > when sorting post List > matches the snapshot 1`] = `
 `;
 
 exports[`Posts.vue > when sorting post List > matches the snapshot 2`] = `
-"<post title="Sortable Post List">
+"<div title="Sortable Post List">
   <transition-group-stub name="list" tag="div" appear="false" persisted="false" css="true" class="flex flex-col gap-4">
     <div index="0" postid="1" showsortup="false" showsortdown="true"></div>
     <div index="1" postid="3" showsortup="true" showsortdown="true"></div>
@@ -45,14 +45,14 @@ exports[`Posts.vue > when sorting post List > matches the snapshot 2`] = `
     <div index="3" postid="5" showsortup="true" showsortdown="true"></div>
     <div index="4" postid="4" showsortup="true" showsortdown="false"></div>
   </transition-group-stub>
-</post>
+</div>
 <div title="List of actions commited">
   <div>
     <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-      <p class="flex-1" data-test="itemText">Moved post 4 from index 3 to index 4</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
+      <p class="flex-1" data-test="itemText">Moved post 4 from index 3 to index 4</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
     </div>
     <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-      <p class="flex-1" data-test="itemText">Moved post 2 from index 1 to index 2</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
+      <p class="flex-1" data-test="itemText">Moved post 2 from index 1 to index 2</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
     </div>
   </div>
 </div>
@@ -60,7 +60,7 @@ exports[`Posts.vue > when sorting post List > matches the snapshot 2`] = `
 `;
 
 exports[`Posts.vue > when sorting post List > matches the snapshot 3`] = `
-"<post title="Sortable Post List">
+"<div title="Sortable Post List">
   <transition-group-stub name="list" tag="div" appear="false" persisted="false" css="true" class="flex flex-col gap-4">
     <div index="0" postid="3" showsortup="false" showsortdown="true"></div>
     <div index="1" postid="1" showsortup="true" showsortdown="true"></div>
@@ -68,17 +68,17 @@ exports[`Posts.vue > when sorting post List > matches the snapshot 3`] = `
     <div index="3" postid="5" showsortup="true" showsortdown="true"></div>
     <div index="4" postid="4" showsortup="true" showsortdown="false"></div>
   </transition-group-stub>
-</post>
+</div>
 <div title="List of actions commited">
   <div>
     <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-      <p class="flex-1" data-test="itemText">Moved post 3 from index 1 to index 0</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
+      <p class="flex-1" data-test="itemText">Moved post 3 from index 1 to index 0</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
     </div>
     <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-      <p class="flex-1" data-test="itemText">Moved post 4 from index 3 to index 4</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
+      <p class="flex-1" data-test="itemText">Moved post 4 from index 3 to index 4</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
     </div>
     <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-      <p class="flex-1" data-test="itemText">Moved post 2 from index 1 to index 2</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
+      <p class="flex-1" data-test="itemText">Moved post 2 from index 1 to index 2</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Time travel</button>
     </div>
   </div>
 </div>

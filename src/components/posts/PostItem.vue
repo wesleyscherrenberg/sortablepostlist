@@ -30,12 +30,17 @@ const onSortHandler = (isAsc: boolean) => {
       <div class="flex-1 p-3 self-center" data-test="postTitle">{{ postTitle }}</div>
       <div class="flex flex-col justify-between" data-test="sortButtons" v-if="showSortUp || showSortDown">
           <button v-if="showSortUp"
+                  aria-label="sortUp"
+                  role="button"
                   data-test="sortUp"
                   class="p-3 transform transition-all duration-200 hover:scale-110"
                   @click="onSortHandler(false)">
             <icon-angle-up class="fill-theme-primary" />
           </button>
+
           <button v-if="showSortDown"
+                  aria-label="sortDown"
+                  role="button"
                   data-test="sortDown"
                   class="p-3 transform transition-all duration-200 hover:scale-110"
                   @click="onSortHandler(true)">

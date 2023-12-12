@@ -3,9 +3,9 @@
 exports[`PostItem.vue > matches the snapshot 1`] = `
 "<div class="flex justify-center items-center shadow rounded bg-white min-h-[6rem] transform transition-all duration-500">
   <div class="flex-1 p-3 self-center" data-test="postTitle">Post 1</div>
-  <div class="flex flex-col justify-between" data-test="sortButtons"><button data-test="sortUp" class="p-3 transform transition-all duration-200 hover:scale-110">
+  <div class="flex flex-col justify-between" data-test="sortButtons"><button aria-label="sortUp" role="button" data-test="sortUp" class="p-3 transform transition-all duration-200 hover:scale-110">
       <icon-angle-up-stub class="fill-theme-primary"></icon-angle-up-stub>
-    </button><button data-test="sortDown" class="p-3 transform transition-all duration-200 hover:scale-110">
+    </button><button aria-label="sortDown" role="button" data-test="sortDown" class="p-3 transform transition-all duration-200 hover:scale-110">
       <icon-angle-down-stub class="fill-theme-primary"></icon-angle-down-stub>
     </button></div>
 </div>"

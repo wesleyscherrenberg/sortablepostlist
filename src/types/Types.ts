@@ -1,6 +1,5 @@
 type Variant = 'primary' | 'secondary' | 'light';
 type Icon = 'info' | 'error' | 'sad';
-
 export interface PostsType {
     userId: number,
     id: number,

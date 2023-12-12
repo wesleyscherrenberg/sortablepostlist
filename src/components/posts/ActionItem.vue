@@ -19,6 +19,8 @@ const itemText = computed(() => {
   <div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
     <p class="flex-1" data-test="itemText">{{itemText}}</p>
     <button @click="onTimeTravelHandler(action)"
+            aria-label="onTimeTravelBtn"
+            role="button"
             data-test="onTimeTravelBtn"
             class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded ">
       {{btnText}}

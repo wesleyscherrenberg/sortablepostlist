@@ -1,7 +1,7 @@
 import {shallowMount, VueWrapper} from '@vue/test-utils';
 import {beforeEach, describe, expect, it} from "vitest";
-import ActionItem from "../posts/ActionItem.vue";
-import type {ActionsType} from "../../types/Types";
+import ActionItem from "@/components/posts/ActionItem.vue";
+import type {ActionsType} from "@/types/Types";
 
 const factory = () => {
     return shallowMount(ActionItem, {

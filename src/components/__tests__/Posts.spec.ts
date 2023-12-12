@@ -1,9 +1,10 @@
 import {shallowMount, VueWrapper} from '@vue/test-utils'
 import {fetchPosts} from "@/services/apiService.js";
 import {beforeAll, beforeEach, describe, expect, it, vi} from "vitest";
-import Posts from "../posts/Posts.vue";
-import ActionItem from "../posts/ActionItem.vue";
-import type {ActionsType} from "../../types/Types";
+import Posts from "@/components/posts/Posts.vue";
+import ActionItem from "@/components/posts/ActionItem.vue";
+import type {ActionsType} from "@/types/Types";
+import {ActionListStub, CardStub, NotificationStub, PostItemStub, PostStub, ToastStub} from "./stubs";
 
 const mocks = vi.hoisted(() => {
     return {
@@ -22,25 +23,6 @@ vi.mock('@/services/apiService', () => ({
     fetchPosts: mocks.fetchPosts,
 }));
 
-const CardStub = {
-    template: '<div><slot></slot></div>'
-};
-
-const ActionListStub = {
-    template: '<div v-bind="$attrs"><slot></slot></div>'
-};
-
-const PostItemStub = {
-    template: `<div v-bind="$attrs"></div>`
-};
-
-const ToastStub = {
-    template: `<div v-bind="$attrs"></div>`
-}
-
-const NotificationStub = {
-    template: `<div v-bind="$attrs"></div>`
-}
 const factory = () => {
     return shallowMount(Posts, {
         props: {
@@ -48,6 +30,7 @@ const factory = () => {
         },
         global: {
             stubs: {
+                Post: PostStub,
                 Card: CardStub,
                 PostItem: PostItemStub,
                 ActionItem: ActionItem,
@@ -87,10 +70,6 @@ describe('Posts.vue', () => {
     });
 
     describe('When the component renders', () => {
-
-        beforeEach( () => {
-            wrapper = factory();
-        });
 
         it('matches the snapshot', () => {
             expect(wrapper.html()).toMatchSnapshot();
@@ -160,6 +139,18 @@ describe('Posts.vue', () => {
             const actionItemComponent = wrapper.findAllComponents(ActionItem)[0];
             expect(actionItemComponent.find('[data-test="itemText"]').text()).toEqual('Moved post 2 from index 1 to index 2');
         })
+
+        it('Post list should match Post 1,3,2,4,5', () => {
+
+            const postItems = wrapper.findAllComponents(PostItemStub);
+            const postIds = [1, 3, 2, 4, 5];
+
+            postIds.forEach((postId, index) => {
+                expect(postItems[index].attributes('postid')).toEqual(postId.toString());
+            });
+        })
+
+
     })
 
     describe('When there are no posts', () => {

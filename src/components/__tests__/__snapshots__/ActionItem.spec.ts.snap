@@ -2,6 +2,6 @@
 
 exports[`ActionItem.vue > matches the snapshot 1`] = `
 "<div class="p-4 flex items-center border-b border-theme-light last:border-none transform transition-all duration-500">
-  <p class="flex-1" data-test="itemText">Moved post 1 from index 0 to index 1</p><button data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Click</button>
+  <p class="flex-1" data-test="itemText">Moved post 1 from index 0 to index 1</p><button aria-label="onTimeTravelBtn" role="button" data-test="onTimeTravelBtn" class="p-4 bg-theme-secondary py-3 px-4 flex-none rounded">Click</button>
 </div>"
 `;
